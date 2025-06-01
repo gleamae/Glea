@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Information System - Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      height: 200px;
+      border-radius: 15px;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      background-color: transparent;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* No hover effect */
+    nav a:hover {
+      background-color: transparent;
+    }
+
+    /* Apply style only when active */
+    nav a.active {
+      background-color: #0f74da;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(to right, #e6f0fa, #ffffff);
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="g4.png" class="logo" alt="Logo" />
+    </div>
+    <nav>
+      <a href="home.html" id="homeLink">Home</a>
+      <a href="about.html" id="aboutLink">About Us</a>
+      <a href="contact.html" id="contactLink">Contact Us</a>
+      <a href="dashboard.html" id="dashboardLink">Dashboard</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to the Student Information System</h2>
+    <p>
+      Streamline your academic journey. Our system provides a seamless platform to manage student records, track progress, and stay informed—anytime, anywhere.
+    </p>
+  </section>
+
+  <script>
+    // Get the current filename from the URL
+    const currentPage = window.location.pathname.split('/').pop();
+
+    // Map filename to link IDs
+    const links = {
+      'home.html': 'homeLink',
+      'about.html': 'aboutLink',
+      'contact.html': 'contactLink',
+      'dashboard.html': 'dashboardLink'
+    };
+
+    const activeLinkId = links[currentPage];
+    if (activeLinkId) {
+      document.getElementById(activeLinkId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

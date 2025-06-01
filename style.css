@@ -1,0 +1,48 @@
+/* Folder Structure:
+- index.html (Login page)
+- home.html
+- about.html
+- contact.html
+- dashboard.html
+- logout.html
+- style.css
+- logo.png (You need to add your own image file)
+*/
+
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 5;
+  padding: 5;
+}
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 50;
+  text-align: center;
+}
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+.container {
+  padding: 20px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin: 10px auto;
+  box-shadow: 0 0 50px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+footer {
+  text-align: center;
+  padding: 2em;
+  background-color: #0077cc;
+  color: white;
+  position: fixed;
+  width: 50%;
+  bottom: 0;
+}

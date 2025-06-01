@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background-color: #f9f9fb;
+    }
+
+    .dashboard-container {
+      display: flex;
+      width: 100%;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background-color: #1e3a8a;
+      color: #fff;
+      padding: 20px;
+      position: fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .sidebar .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #e0e7ff;
+    }
+
+    .sidebar .logo img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar nav ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar nav ul li a {
+      color: #cbd5e1;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .sidebar nav ul li a:hover {
+      background-color: #3b82f6;
+      color: #fff;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 240px;
+      padding: 40px;
+      flex: 1;
+    }
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .welcome-text h1 {
+      font-size: 28px;
+      color: #1e293b;
+    }
+
+    .welcome-text p {
+      color: #64748b;
+    }
+
+    .student-profile-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .student-profile-top img {
+      width: 90px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .student-name {
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .student-email {
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    section h2 {
+      color: #1d4ed8;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      color: #334155;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .main-footer {
+      background-color: #1e293b;
+      color: #cbd5e1;
+      padding: 40px 20px 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .main-footer .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo img {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo p {
+      font-size: 14px;
+      color: #e2e8f0;
+    }
+
+    .footer-bottom {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .sidebar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="g4.png" alt="Logo" />
+        <span>Student-SIS</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#current-grades">Midterm Grades</a></li>
+          <li><a href="#past-grades">Prelim Grades</a></li>
+          <li><a href="#course-info">Course Info</a></li>
+          <li><a href="#class-schedule">Class Schedule</a></li>
+          <li><a href="index.html">Log Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="dashboard-header" id="dashboard">
+        <div class="welcome-text">
+          <h1>Welcome, Glezyl</h1>
+          <p>Your academic dashboard overview.</p>
+        </div>
+        <div class="student-profile-top">
+          <img src="images.jpg" alt="Profile" />
+          <div>
+            <div class="student-name">Glezyl</div>
+            <div class="student-email">glezyl@email.com</div>
+          </div>
+        </div>
+      </header>
+
+      <section id="current-grades">
+        <h2>Prelim Grades</h2>
+        <p>📘 COMPRE 1 - 97</p>
+        <p>📚 JP Rizal - 95</p>
+        <p>🖥️ IP TECH - 99</p>
+      </section>
+
+      <section id="past-grades">
+        <h2>Midterm Grades</h2>
+        <p>📘 COMPRE 1 - 99</p>
+        <p>📚 JP RIZAL - 88</p>
+        <p>🖥️ IP TECH - 99</p>
+      </section>
+
+      <section id="course-info">
+        <h2>Course Information</h2>
+        <p>Program: Diploma in Information Technology</p>
+        <p>Year Level: 2nd Year - Second Semester</p>
+        <p>Academic Term: 2024-2025</p>
+      </section>
+
+      <section id="class-schedule">
+        <h2>Class Schedule</h2>
+        <p>🕘 Friday: 7:00 AM - 7:30 AM (IP TECH, JP Rizal)</p>
+        <p>🕘 Saturday: 7:00 AM - 7:30 PM (INFOMAN - GUI)</p>
+        <p>🕘 Sunday: 7:30 PM - 8:00 PM (INFOMAN - COMPRE)</p>
+      </section>
+
+      <footer class="main-footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="g4.png" alt="System Logo" />
+            <p>Asian College Student Information System</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2025 Student Information System. All rights reserved.
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
